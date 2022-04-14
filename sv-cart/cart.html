@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gio hang</title>
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body> 
+    </div>
+    <div class="boxcenter">
+        <div id="shop">
+            <h1 id="h1">SHOP POSTER</h1>
+        </div>
+
+        <div class="row m menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="#">Giỏ hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+            </ul>
+        </div>
+        <div class="row mb "> 
+            <div class="row">
+                <div class="banner mb">
+                    <img id="img" onclick="changeImage()" src="../Image/1.jpg" alt="">
+                   <script>
+                       var index = 1;
+                       changeImage = function(){
+                        var imgs = ["../Image/1.jpg","../Image/2.jpg","../Image/7.jpg","../Image/9.jpg"];
+                           document.getElementById('img').src = imgs[index];
+                           index++;
+                           if(index == 3){
+                               index = 0;
+                           }
+
+                       }
+                       setInterval(changeImage,2000);
+                   </script>
+                </div>
+            </div>
+           <h2>THÔNG TIN NHẬN HÀNG</h2>
+           <hr color="red">
+           <form >
+               <tbody id="thongtinnhanhang">
+            <label>Họ và tên </label>
+            <input type="text" name="hoten">
+            <div id="error1" class="error"></div>
+            <br>
+            <label for="name">Địa chỉ </label>
+            <input type="text" name="diachi" >
+            
+            <br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" >
+            <div id="error3" class="error"></div>
+            <br>
+            <label for="subject">Đơn vị vận chuyển</label>
+					<div class="inp">
+						<input class="sothich" type="radio" name="gender"><span>My KingDom</span>
+						<input class="sothich" type="radio" name="gender"><span>Shopee</span>
+						<input class="sothich" type="radio" name="gender"><span>Tiki</span>
+						<input class="sothich" type="radio" name="gender"><span>Lazada</span>
+					</div>
+            <label for="text">Ghi chú: </label>
+					<textarea name="text" id="" cols="110" rows="10" id="note"  ></textarea>
+                </tbody>
+           </form>
+           <h2>GIỎ HÀNG</h2> 
+           <hr color="red">
+           <div class="giohang">
+               <div>
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>Hình</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền ($)</th>
+                    </tr>
+                    <tbody id="mycart">
+    
+                    </tbody>
+                </table>
+                <button onclick="dongydathang()">Đồng ý đặt hàng</button>
+               </div>
+          
+        </div>
+        <hr color="red">
+        <footer>
+            Liên hệ với chúng tôi:
+            <a href="#">Facebook </a>-<a href="#"> Intagram </a>
+            <br>
+            <p>FPT Polytechnic © 2017. All rights reserved.</p>
+        </footer>
+       
+ 
+   
+    <script>
+      
+   </script>
+    
+
+<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+<script src="./js/cart.js"></script>
+<script>  showgiohang_thanhtoan();  </script>
+</body>
+
+</html>
